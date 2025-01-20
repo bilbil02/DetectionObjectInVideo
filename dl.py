@@ -9,6 +9,19 @@ from tensorflow.keras.utils import to_categorical
 from sklearn.preprocessing import LabelEncoder
 from sklearn.model_selection import train_test_split
 
+# URL file yolov3.weights yang diunggah ke penyimpanan cloud
+url = 'https://drive.google.com/file/d/1Ifv2TgD0KpVYG7cKHB0GVPcJF4XhCWgR/view?usp=sharing'  # Ganti dengan URL file Anda
+
+# Cek dan unduh file yolov3.weights
+if not os.path.exists('yolov3.weights'):
+    st.write("Mengunduh file yolov3.weights...")
+    r = requests.get(url)
+    with open('yolov3.weights', 'wb') as f:
+        f.write(r.content)
+    st.success("File yolov3.weights berhasil diunduh!")
+else:
+    st.success("File yolov3.weights sudah ada.")
+    
 # Load YOLO model
 def load_yolo_model():
     net = cv2.dnn.readNet("yolov3.weights", "yolov3.cfg")
