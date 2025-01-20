@@ -1,6 +1,7 @@
 import streamlit as st
 import os
 import cv2
+import requests
 import numpy as np
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import LSTM, Dense
