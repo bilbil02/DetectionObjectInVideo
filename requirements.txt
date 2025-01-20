@@ -1,6 +1,7 @@
-opencv-python-headless==4.5.5.64
+opencv-python-headless==4.7.0.72
 streamlit
-numpy
+numpy==1.23.5
 tensorflow
 keras
 scikit-learn
+
