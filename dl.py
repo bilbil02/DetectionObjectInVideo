@@ -19,9 +19,6 @@ if not os.path.exists('yolov3.weights'):
     r = requests.get(url)
     with open('yolov3.weights', 'wb') as f:
         f.write(r.content)
-    st.success("File yolov3.weights berhasil diunduh!")
-else:
-    st.success("File yolov3.weights sudah ada.")
     
 # Load YOLO model
 def load_yolo_model():
