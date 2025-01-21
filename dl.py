@@ -27,7 +27,7 @@ def load_yolo_model():
     output_layers_indices = net.getUnconnectedOutLayers()
     output_layers = [layer_names[i - 1] for i in output_layers_indices.flatten()]
     return net, output_layers
-
+#sss
 # Load class names
 def load_class_names():
     with open("coco.names", "r") as f:
